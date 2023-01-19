@@ -49,8 +49,17 @@ actor {
 //Challenge 4
     public query func number_of_words(t : Text) : async Nat {
         
-        //This code doesn't handle the case when spaces go in a row. need to get back to it
-        return Iter.size(Text.split(t, #char(' ')));
+        let array = Text.split(t, #char(' '));
+        //eliminates spaces that go in a row
+        let f = func (text : Text) : Bool {
+            if (text.size() > 0){
+                return true;}
+            else {
+                return false;
+                };
+            };
+        let filtered_array = Iter.filter<Text>(array, f);
+        return Iter.size(Iter.filter<Text>(array, f));
     };
 
 //Challenge 5
