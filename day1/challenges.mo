@@ -1,17 +1,17 @@
 actor {
 
 //Challenge #1
-public func multiply (n : Nat, m : Nat) : async Nat{
+public query func multiply (n : Nat, m : Nat) : async Nat{
     return n * m;
 };
 
 //Challenge #2
-public func volume (n : Nat) : async Nat{
+public query func volume (n : Nat) : async Nat{
     return n ** 3;
 };
 
 //Challenge #3
-public func hours_to_minutes (n : Nat) : async Nat{
+public query func hours_to_minutes (n : Nat) : async Nat{
     return n * 60;
 };
 
@@ -28,7 +28,7 @@ public query func get_counter () : async Nat {
 };
 
 //Challenge #5
-public func test_devide (n : Nat, m : Nat) : async Bool {
+public query func test_devide (n : Nat, m : Nat) : async Bool {
     return if (n % m > 0){
         false;
         } else {
