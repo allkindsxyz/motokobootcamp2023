@@ -5,7 +5,7 @@ import Buffer "mo:base/Buffer";
 import Option "mo:base/Option";
 
 
-actor {
+module {
     
 //Challenge 1
     public func second_maximum(array : [Int]) :  async Int{
@@ -40,7 +40,7 @@ actor {
 
 //Challenge 3
 
-    public func dropn<T>(xs : [T], n : Nat) : async [T] {
+    public func dropn<T>(xs : [T], n : Nat) : [T] {
     return Array.tabulate<T>(
       xs.size() - n, 
       func i = xs[i + n]
