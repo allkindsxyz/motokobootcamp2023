@@ -2,7 +2,7 @@
 False. Stable indeed indicates that we use stable memory, not heap
 
 2. A.call() -> B.call() -> C How much time (or rounds of consensus) do we need to wait for an answer?
-Not sure how to read this syntax exactly, but i assume 2 rounds of consesus 1 sec each if there are in thy subnet, or 4 sec a round.
+Not sure how to read this syntax exactly, but i assume 2 rounds of consesus 2 sec each if there are in the same subnet, or 4 sec if in different.
 
 3. Is possible to realize an intercanister call in query mode?
 No. await looks like a commiting a transaction that needs to be "registered".
